@@ -1,0 +1,26 @@
+{
+  "name": "db-migration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate-development": "./node_modules/.bin/knex migrate:latest --env development",
+    "seed-development": "./node_modules/.bin/knex seed:run --env development",
+    "migrate-test": "./node_modules/.bin/knex migrate:latest --env testing",
+    "seed-test": "./node_modules/.bin/knex seed:run --env testing",
+    "migrate-stage": "./node_modules/.bin/knex migrate:latest --env staging",
+    "seed-stage": "./node_modules/.bin/knex seed:run --env staging",
+    "migrate-prod": "./node_modules/.bin/knex migrate:latest",
+    "seed-prod": "./node_modules/.bin/knex seed:run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "knex": "^0.95.6",
+    "knex-migrate": "^1.7.4",
+    "pg": "^8.6.0",
+    "randomstring": "^1.2.1"
+  }
+}
